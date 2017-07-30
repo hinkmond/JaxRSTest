@@ -21,13 +21,13 @@ public class JaxRSTest extends ResourceConfig {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String get() {
-      return "get: Hello world from no web.xml WORKS for Mac with change to /etc/hosts add hostname TEXT_PLAIN!";
+      return "get: Hello world from no web.xml WORKS for no JaxRSTest.xml file TEXT_PLAIN!";
     }
 
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String getMessage() {
-      return "getMessage: Hello world from no web.xml WORKS for Mac with change to /etc/hosts add hostname TEXT_HTML!";
+      return "getMessage: Hello world from no web.xml WORKS for no JaxRSTest.xml file TEXT_HTML!";
     }
   }
 
