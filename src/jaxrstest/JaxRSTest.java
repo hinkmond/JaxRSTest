@@ -21,13 +21,13 @@ public class JaxRSTest extends ResourceConfig {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String get() {
-      return "get: Hello world from TEXT_PLAIN!";
+      return "get: Hello world from using scp #101 TEXT_PLAIN!";
     }
 
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String getMessage() {
-      return "getMessage: Hello world from TEXT_HTML!";
+      return "getMessage: Hello world using scp #101 TEXT_HTML!";
     }
   }
 
