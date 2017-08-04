@@ -13,7 +13,7 @@
     <scp file="${source-file}"
          todir="${userid}@${host}:${destination-file}"
          keyfile="${user.home}/.ssh/id_rsa"
-         passphrase=""
+         trust="yes"
     />
 
     <!-- Example: Execute an additional shell command
