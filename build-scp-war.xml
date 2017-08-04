@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="build" basedir=".">
 
-  <!-- NOTE: Make sure lib/jsch-*.jar gets copied to ${user.home}/.ant/lib -->
+  <!-- NOTE: Make sure initially to copy lib/jsch-*.jar to ${user.home}/.ant/lib -->
+
+  <!-- include custom properties file -->
+  <include optional="true" file="${user.home}/.ant/scp-war.properties" />
+
+  <!-- Set host to default if not set in custom properties file -->
+  <condition property="host" value="127.0.0.1">
+    <not>
+      <isset property="host"/>
+    </not>
+  </condition>
 
   <property name="source-file" value="out/artifacts/JaxRSTest/JaxRSTest.war"/>
   <property name="userid" value="jetty"/>
-  <property name="host" value="52.175.228.99"/>
   <property name="destination-file" value="/usr/local/share/jetty/webapps"/>
 
   <target name="copy-jetty-war">
@@ -24,7 +33,6 @@
     -->
 
   </target>
-
 </project>
 
 
